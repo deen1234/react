@@ -1,0 +1,160 @@
+@import '../../../styles/variables.less';
+
+.detail-card-container {
+  width: 100%;
+  border-radius: 12px !important;
+  box-shadow: @base-drop-shadow;
+  height: 100%;
+
+  .ant-card-body {
+    padding: 0;
+    display: flex;
+  }
+
+  .left-sec {
+    width: 30%;
+
+    .side-img {
+      width: 100%;
+      border-radius: 12px 0 0 12px;
+      height: 100%;
+    }
+  }
+
+  .right-sec {
+    width: 68%;
+    margin-left: 1.5rem;
+    padding: 1rem;
+    padding-left: 0;
+
+    .light-text {
+      color: @text-primary-color;
+      font-size: 0.9rem;
+    }
+    .dark-text {
+      color: @text-secondary-color;
+      font-weight: 500;
+      font-size: 1.25rem;
+    }
+
+    .top-sec {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .content-sec {
+        width: 70%;
+
+        .title {
+          color: @text-secondary-color;
+          font-size: 1.8rem;
+          font-weight: bold;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .inline-sec {
+          display: flex;
+          align-items: center;
+          padding: 0.2rem 0;
+
+          .rating-sec {
+            display: flex;
+            align-items: center;
+
+            .star-icon {
+              color: #faea26;
+              font-size: 1rem;
+              margin-right: 0.15rem;
+            }
+          }
+
+          .divider {
+            border: none;
+            border-left: 2px solid;
+            height: 1rem;
+            margin: 0 1rem;
+          }
+          .hotel-tag {
+            background-color: #f7f7f8;
+            color: #a2a5a5;
+            border-radius: 6px;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .price-sec {
+        width: 30%;
+
+        .price {
+          font-size: 1.5rem;
+          font-weight: bold;
+          text-align: right;
+          color: @text-primary-color;
+          line-height: normal;
+
+          @media screen and (max-width: 1279.9px) {
+            font-size: 2rem !important;
+          }
+        }
+        .minuts {
+          text-align: right;
+          color: @text-secondary-color;
+          font-weight: 500;
+          font-size: 1rem;
+
+          @media screen and (max-width: 1279.9px) {
+            font-size: 1rem !important;
+          }
+        }
+      }
+    }
+
+    .btn-sec {
+      display: flex;
+      justify-content: flex-end;
+
+      .primary-btn {
+        border-radius: @base-radius;
+        padding: 0.75rem;
+        min-width: 150px;
+        height: auto;
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+.ant-card-rtl > .ant-card-body > .left-sec > .side-img {
+  border-radius: 0 12px 12px 0;
+}
+
+.time-solot-btn-sec {
+  .inline-box {
+    flex-wrap: inherit;
+    overflow-x: auto;
+  }
+
+  .available-text {
+    font-size: 0.9rem;
+    color: @text-primary-color;
+    padding: 0.5rem 0;
+  }
+
+  .no-bp {
+    padding-bottom: 0;
+    color: #80808094;
+  }
+  .primary-btn {
+    border-radius: @base-radius;
+    padding: 0.25rem 0.75rem;
+    width: 100%;
+    height: auto;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+}

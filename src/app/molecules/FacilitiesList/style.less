@@ -1,0 +1,49 @@
+@import '../../../styles/variables.less';
+
+.facilities-list-container {
+  box-shadow: @base-drop-shadow;
+  background-color: #fcfcfc;
+  padding: 2rem;
+  border-radius: @base-radius;
+
+  @media screen and (max-width: 991.9px) {
+    display: none;
+  }
+
+  .facility-card-container {
+    .card-icon {
+      font-size: 4rem;
+      display: block;
+    }
+
+    .facility-title {
+      font-size: 1.8rem;
+      text-align: center;
+      color: @text-secondary-color;
+      padding: 2rem 0;
+      font-weight: 700;
+
+      @media screen and (max-width: 1200px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .list-section {
+      li {
+        list-style-type: disc;
+        color: @text-secondary-color;
+        font-size: 0.9rem;
+
+        &:not(:last-child) {
+          padding-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .card-divider {
+    height: 21vh;
+    border-width: 2px;
+    border-color: @text-secondary-color;
+  }
+}

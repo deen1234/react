@@ -1,0 +1,138 @@
+@import '../../../styles/variables.less';
+
+.room-confirmation-container {
+  .room-confirmation-card {
+    box-shadow: @base-drop-shadow;
+    border-radius: @base-radius;
+    width: 100%;
+
+    .divider {
+      border-color: @text-secondary-color;
+    }
+
+    .ant-card-head {
+      border-radius: @base-radius @base-radius 0 0;
+      background-color: #f7f7f7;
+      color: @text-secondary-color;
+      font-size: 2rem;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .ant-card-body {
+      padding: 0;
+      padding: 0 1.5rem;
+
+      .left-sec {
+        padding: 2rem 1rem;
+
+        .inline-divider {
+          height: auto;
+          border-color: @text-secondary-color;
+          margin-top: 2rem;
+        }
+      }
+      .right-sec {
+        padding: 2rem 1rem;
+        .bookingMap {
+          .map-container {
+            height: 200px;
+            margin-bottom: 20px;
+          }
+          Button {
+            margin: auto;
+            margin-bottom: 20px;
+            display: table;
+          }
+        }
+        .title-name {
+          font-family: 'Montserrat', sans-serif;
+          font-family: 600;
+          font-size: 2rem;
+          padding-bottom: 0.5rem;
+          color: @text-secondary-color;
+        }
+
+        .star-count {
+          color: @text-secondary-color;
+          font-size: 1.25rem;
+        }
+        .start {
+          color: #faea26;
+          font-size: 1.25rem;
+        }
+        .title-divider {
+          border-color: @text-secondary-color;
+          border-width: 2px;
+          height: 1.25rem;
+        }
+        .light-text {
+          color: #387ef3;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          font-size: 1rem;
+        }
+
+        .dark-text {
+          color: @text-secondary-color;
+          font-size: 1rem;
+          font-weight: 600;
+          padding-bottom: 0.5rem;
+        }
+
+        .total-section {
+          display: flex;
+          flex-direction: column;
+          padding: 0.5rem 1rem;
+          background-color: #f7f7f8;
+          margin-top: 2rem;
+
+          .inlinePrice {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          .title,
+          .price {
+            font-size: 1rem;
+            color: @text-primary-color;
+            font-weight: 600;
+          }
+
+          .total-title,
+          .total-price {
+            font-size: 1.5rem;
+            color: #707070;
+            font-weight: 600;
+          }
+        }
+
+        .btn-action {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          margin-top: 3rem;
+
+          button {
+            min-width: 120px;
+            color: @bg-color;
+            border-radius: @base-radius;
+            padding: 0.5rem;
+            border: none;
+            height: auto;
+          }
+
+          .cancel-btn {
+            background-color: #f56c6c;
+            margin-right: 1rem;
+          }
+
+          .ant-btn-rtl {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

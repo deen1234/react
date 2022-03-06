@@ -1,0 +1,15 @@
+service: shaghr-web
+
+provider:
+  name: aws
+  stage: ${opt:stage, "dev"}
+  region: ${opt:region, "me-south-1"}
+
+plugins:
+  - serverless-finch
+
+custom:
+  client:
+    bucketName: shaghr-web-${self:provider.stage}
+    distributionFolder: build
+    errorDocument: 'index.html'

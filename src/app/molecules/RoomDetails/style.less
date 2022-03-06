@@ -1,0 +1,144 @@
+@import '../../../styles/variables.less';
+
+.room-detail-container {
+  .side-border {
+    border-left: 2px solid @base-border-color;
+
+    @media screen and (max-width: 991.9px) {
+      border: none;
+    }
+  }
+  .divider {
+    border-color: @base-border-color;
+    border-width: 2px;
+  }
+  .detail-text {
+    color: @text-secondary-color;
+    font-size: 0.9rem;
+  }
+  .room-picture-box {
+    height: 175px;
+  }
+  .room-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .detail-card {
+    padding: 1.5rem 1rem;
+    border-radius: @base-radius;
+    box-shadow: @base-drop-shadow;
+
+    @media screen and (max-width: 991.9px) {
+      box-shadow: none;
+      padding: 0;
+    }
+
+    .main-heading {
+      font-size: 1.9rem;
+      color: #707070;
+
+      @media screen and (max-width: 1200px) {
+        font-size: 1.5rem;
+      }
+      @media screen and (max-width: 574.9px) {
+        font-size: 1.25rem;
+      }
+    }
+
+    .guest-number {
+      font-size: 1rem;
+      color: @text-primary-color;
+      padding-bottom: 1rem;
+    }
+
+    .total-section {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem 1rem;
+      background-color: @bg-color;
+
+      .inlinePrice {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .title,
+      .price {
+        font-size: 1rem;
+        color: @text-primary-color;
+        font-weight: 600;
+      }
+
+      .total-title,
+      .total-price {
+        font-size: 1.5rem;
+        color: #707070;
+        font-weight: 600;
+      }
+    }
+
+    .btn-sec {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .continue-btn {
+        border-radius: @base-radius;
+        min-height: 50px;
+        font-size: 1.25rem;
+        font-weight: 600;
+        min-width: 150px;
+        font-family: 'Montserrat', sans-serif;
+      }
+    }
+  }
+
+  .phone-col {
+    direction: ltr !important;
+
+    .phone-filed {
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      min-height: 50px;
+      border: 1px solid #bce0fd;
+
+      .side-box {
+        padding: 11px;
+        width: 70px;
+        background-color: #3ba6ab;
+        color: #fff;
+        border-radius: 10px 0px 0px 10px;
+        min-height: 50px;
+        padding-top: 14px;
+      }
+      .react-tel-input {
+        .form-control {
+          min-height: 50px;
+          width: 100%;
+          border-radius: 0px 10px 10px 0px;
+          border: none;
+        }
+        .flag-dropdown {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.list-section {
+  li {
+    list-style-type: disc;
+    color: @text-secondary-color;
+    font-size: 0.9rem;
+
+    &:not(:last-child) {
+      padding-bottom: 0.5rem;
+    }
+  }
+}

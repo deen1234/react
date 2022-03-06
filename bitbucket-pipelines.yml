@@ -1,24 +1,51 @@
-#  Template NodeJS build
+image: node:12-alpine
 
-#  This template allows you to validate your NodeJS code.
-#  The workflow allows running tests and code linting on the default branch.
-
-image: node:16
+definitions:
+  steps:
+    - step: &dev-deploy
+        name: Deploy to Dev test
+        caches:
+          - node
+        script:
+          - apk add python3
+          - npm install -g serverless
+          - npm install
+          - unset CI
+          - REACT_APP_BASE_URL=${BASE_URL_DEV} REACT_APP_MAP_API=${MAP_API_DEV} npm run build
+          - git push -f https://heroku:7e91fce1-3f98-4b42-92c1-4b34d3e19e8b@git.heroku.com/bittest-abdeen.git
+          # - serverless config credentials --provider aws --key ${AWS_ACCESS} --secret ${AWS_SECRET}
+          # - serverless client deploy --no-confirm --stage dev
+  # - step: &stage-deploy
+  #         name: Deploy to Staging
+  #         caches:
+  #         - node
+  #         script:
+  #         - apk add python3
+  #         - npm install -g serverless
+  #         - npm install
+  #         - unset CI
+  #         - REACT_APP_BASE_URL=${BASE_URL_STAGE} REACT_APP_MAP_API=${MAP_API_STAGE} npm run build
+  #         - serverless config credentials --provider aws --key ${AWS_ACCESS} --secret ${AWS_SECRET}
+  #         - serverless client deploy --no-confirm --stage staging
+  # - step: &prod-deploy
+  #         name: Deploy to Prod
+  #         caches:
+  #         - node
+  #         script:
+  #         - apk add python3
+  #         - npm install -g serverless
+  #         - npm install
+  #         - unset CI
+  #         - REACT_APP_BASE_URL=${BASE_URL_PROD} REACT_APP_MAP_API=${MAP_API_PROD} npm run build
+  #         - serverless config credentials --provider aws --key ${AWS_ACCESS} --secret ${AWS_SECRET}
+  #         - serverless client deploy --no-confirm --stage prod
 
 pipelines:
-  default:
-    - parallel:
-        - step:
-            name: Build and Test
-            caches:
-              - node
-            script:
-              - npm install
-              - git push -f https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git $BITBUCKET_BRANCH
-        - step:
-            name: Code linting
-            script:
-              - npm install eslint
-              - npx eslint .
-            caches:
-              - node
+  branches:
+    master:
+      - step: *dev-deploy
+    #   - step: *prod-deploy
+    # staging:
+    #   - step: *stage-deploy
+    # dev:
+    #   - step: *dev-deploy

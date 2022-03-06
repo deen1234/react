@@ -1,0 +1,27 @@
+@import '../../../styles/variables.less';
+
+.counter-field-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 250px;
+  margin-bottom: 0.5rem;
+
+  .field-title {
+    color: @text-primary-color;
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+
+  .counter {
+    .counter-icon {
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+    .counter-value {
+      color: @text-primary-color;
+      font-size: 1rem;
+      text-transform: capitalize;
+    }
+  }
+}

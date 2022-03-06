@@ -1,0 +1,41 @@
+@import '../../../styles/variables.less';
+
+.filter-item {
+  text-align: center;
+
+  .filter-icon {
+    font-size: 2.5rem;
+    color: grey;
+  }
+  .filter-heading {
+    color: @text-color;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1rem;
+    }
+
+    @media screen and (max-width: 412px) {
+      font-size: 0.85rem;
+    }
+  }
+  .filter-text {
+    color: gray;
+    font-size: 1rem;
+
+    @media screen and (max-width: 500px) {
+      font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 412px) {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+.vertical-divider {
+  border-left: 2px solid @text-primary-color;
+  height: 3.5rem;
+}

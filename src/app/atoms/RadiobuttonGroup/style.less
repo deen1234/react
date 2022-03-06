@@ -1,0 +1,33 @@
+@import '../../../styles/variables.less';
+
+.radio-btn-container {
+  margin-top: 1rem;
+
+  .radio-btn-section {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+
+    overflow-x: auto;
+
+    .ant-radio-button-wrapper {
+      border-radius: @base-radius !important;
+      min-height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      margin-right: 0.5rem;
+      min-width: max-content;
+      height: auto;
+
+      &::before {
+        width: fit-content;
+      }
+
+      .ant-radio-button {
+        border: none;
+      }
+    }
+  }
+}

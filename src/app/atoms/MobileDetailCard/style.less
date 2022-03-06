@@ -1,0 +1,117 @@
+@import '../../../styles/variables.less';
+
+.mobile-detail-card-container {
+  border-radius: @base-radius;
+  box-shadow: @base-drop-shadow;
+
+  .card-divider {
+    margin-top: 4px;
+    border-color: @text-primary-color;
+  }
+
+  .inline-box {
+    height: 60px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .ant-card-body {
+    padding: 0.5rem;
+  }
+  .card-img {
+    width: 100%;
+    border-radius: 6px 0 0 6px;
+    height: 100%;
+  }
+
+  .title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: @text-secondary-color;
+    font-weight: 700;
+  }
+
+  .inline-sec {
+    display: flex;
+    align-items: center;
+  }
+
+  .rating-sec {
+    display: flex;
+    align-items: center;
+
+    .star-icon {
+      color: #faea26;
+      font-size: 1.25rem;
+      margin-right: 0.15rem;
+    }
+    .rating-text {
+      font-size: 1.15rem;
+      color: @text-secondary-color;
+    }
+  }
+  .divider {
+    border: none;
+    border-left: 2px solid;
+    height: 1rem;
+    margin: 0 1rem;
+  }
+  .hotel-tag {
+    background-color: #f7f7f8;
+    color: @text-secondary-color;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 4px 8px;
+    border: none;
+  }
+
+  .dark-text {
+    color: @text-secondary-color;
+    font-size: 0.9rem;
+  }
+
+  .price-text {
+    text-align: end;
+    color: @text-primary-color;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .mint-text {
+    text-align: end;
+    color: @text-primary-color;
+    font-size: 0.9rem;
+  }
+
+  .select-btn {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    height: auto;
+    padding: 0.5rem;
+    border-radius: 6px;
+  }
+
+  .available-text {
+    font-size: 1rem;
+    color: @text-primary-color;
+  }
+
+  .primary-btn {
+    border-radius: @base-radius;
+    padding: 0.25rem 0.75rem;
+    // min-width: 150px;
+    width: 100%;
+    height: auto;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+}
+
+.ant-card-rtl {
+  .side-img {
+    border-radius: 0 6px 6px 0;
+  }
+}

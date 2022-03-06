@@ -1,0 +1,117 @@
+@import '../../../styles/variables.less';
+
+.ant-popover {
+  padding: 0;
+}
+
+.home-page-banner-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  padding: 0 50px;
+
+  @media screen and (max-width: 991.9px) {
+    height: auto;
+  }
+
+  .type-tab-section {
+    position: relative;
+
+    @media screen and (max-width: 991.9px) {
+      padding-top: 3rem;
+      padding-bottom: 1rem;
+    }
+
+    .ant-tabs-nav {
+      margin: 0;
+
+      &::before {
+        border: none;
+      }
+
+      .ant-tabs-tab {
+        background-color: @bg-color;
+        border-radius: 0 10px 0 0;
+        margin: 0;
+        border: none;
+
+        &:first-child {
+          border-radius: 10px 0 0 0;
+        }
+
+        .ant-tabs-tab-btn {
+          color: @text-primary-color;
+        }
+      }
+      .ant-tabs-tab-active {
+        background-color: @text-primary-color;
+
+        .ant-tabs-tab-btn {
+          color: @white-color;
+        }
+      }
+    }
+
+    .tab-content-section {
+      padding: 1.5rem;
+      background: linear-gradient(90deg, #e7e7e3 0%, #7a8f9a 35%, #698eb0 100%);
+      border-radius: 0 @base-radius @base-radius;
+
+      @media screen and (max-width: 767.9px) {
+        padding: 1rem;
+      }
+      @media (min-width: 991.9px) and (max-width: 1199.9px) {
+        padding: 1rem;
+      }
+
+      .search-btn {
+        border-radius: 6px;
+        min-height: 40px;
+        padding: 0.25rem 1.5rem;
+        width: 100%;
+      }
+
+      .select-items {
+        border-radius: 6px;
+        padding: 0.25rem 0.5rem;
+        min-height: 40px;
+      }
+    }
+  }
+
+  .ant-tabs-rtl {
+    .ant-tabs-tab {
+      background-color: @bg-color;
+      border-radius: @base-radius 0 0 0 !important;
+      margin: 0;
+      border: none;
+
+      &:first-child {
+        border-radius: 0 @base-radius 0 0px !important;
+      }
+    }
+
+    .tab-content-section {
+      border-radius: @base-radius 0 @base-radius @base-radius;
+    }
+  }
+
+  .banner-text {
+    font-size: 2.5rem;
+    color: @white-color;
+    text-align: center;
+    position: relative;
+    font-weight: 600;
+    padding-top: 3rem;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1.75rem;
+    }
+    @media screen and (max-width: 991.9px) {
+      padding-bottom: 2rem;
+      padding-top: 0;
+    }
+  }
+}

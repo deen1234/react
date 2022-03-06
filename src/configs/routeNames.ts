@@ -1,0 +1,9 @@
+export const ROOT = '/';
+export const HOMEFACILITY = 'home-facility';
+export const HOMEROOM = 'home-room';
+export const ROOMCONFIRMATION = 'room-confirmation';
+export const FACILITYCONFIRMATION = 'facility-confirmation';
+export const ROOMBOOKING = 'room-booking';
+export const FACILITYBOOKING = 'facility-booking';
+export const MYRESERVATION = 'my-reservation';
+export const PROFILE = 'profile';

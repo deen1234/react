@@ -1,0 +1,33 @@
+@import '../../../styles/variables.less';
+
+.add-on-field-container {
+  .add-on-field {
+    border-color: @base-border-color;
+
+    .ant-input-wrapper {
+      min-height: 50px;
+
+      .ant-input-group-addon {
+        border-color: @base-border-color;
+        border-radius: @base-radius 0px 0px @base-radius;
+        min-height: 50px;
+        background-color: @text-primary-color;
+        min-width: 70px;
+        color: @white-color;
+      }
+
+      .ant-input {
+        border-color: @base-border-color;
+        border-radius: 0px @base-radius @base-radius 0px;
+        min-height: 50px;
+      }
+
+      .ant-input-rtl {
+        border-radius: @base-radius 0px 0px @base-radius;
+      }
+    }
+    .ant-input-group-rtl > .ant-input-group-addon {
+      border-radius: 0px @base-radius @base-radius 0px;
+    }
+  }
+}

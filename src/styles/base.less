@@ -1,0 +1,49 @@
+body {
+  background-color: @bg-color;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+.component-wrapper {
+  padding: 0 50px;
+  margin: 6rem 0;
+
+  @media screen and (max-width: 574.9px) {
+    padding: 0 24px;
+  }
+}
+
+.error-field {
+  border: 2px solid #fd6c6c !important;
+  border-radius: 10px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

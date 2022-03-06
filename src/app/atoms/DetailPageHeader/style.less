@@ -1,0 +1,28 @@
+@import '../../../styles/variables.less';
+
+.detail-page-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+
+  .title {
+    font-size: 2rem;
+    color: @text-secondary-color;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 1.5rem;
+      min-width: 150px;
+    }
+  }
+  .divider {
+    border-color: @text-secondary-color;
+    border-width: 4px;
+  }
+  .address {
+    color: #397df2;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
